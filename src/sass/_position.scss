@@ -1,0 +1,64 @@
+// ==== column =======
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+// ==== clearfix ========
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.clear-left{
+  clear: left;
+}
+
+.clear-right{
+  clear: right;
+}
+
+.clear-both{
+  clear: both;
+}
+
+// ========= responsive clear ==========
+// ===== xs ========
+@media screen and (max-width:767px){
+  .clear-left-xs{
+    clear: left;
+  }
+
+  .clear-right-xs{
+    clear: right;
+  }
+
+  .clear-both-xs{
+    clear: both;
+  }
+}
+
+// ===== sm =======
+
+@media screen and (min-width:768px){
+  .clear-left-sm{
+    clear: left;
+  }
+
+  .clear-right-sm{
+    clear: right;
+  }
+
+  .clear-both-sm{
+    clear: both;
+  }
+}

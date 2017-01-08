@@ -1,0 +1,104 @@
+//=============== no_space series ========
+
+.no_pad {
+	padding-left:0 !important;
+	padding-right:0 !important;
+}
+.no_pad_v{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no_pad-xs{
+  @include breakpoint(xs) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.no_pad-xxs{
+  @include breakpoint(xxs) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.no_margin{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.no_margin_v{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.no_margin_v-xs{
+  @include breakpoint(xs) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+
+// ============== round corners =====================
+
+.round_corner {
+	border-radius:$base_border_radius;
+}
+.round_corner-bottom {
+	border-bottom-left-radius:$base_border_radius;
+	border-bottom-right-radius:$base_border_radius;
+
+}
+
+// ============== column spaces =====================
+
+.col_space--sm{
+	padding-left:$space_sm;
+	padding-right: $space_sm;
+}
+.col_space--xs{
+	padding-left:$space_xs;
+	padding-right: $space_xs;
+}
+.col_space--xxs{
+  padding-left: $space_xxs;
+  padding-right: $space_xxs;
+}
+
+
+
+// ============== row spaces ========================
+
+.row_space-top--xs {
+	margin-top:$space_xs;
+}
+.row_space-top--md{
+	margin-top: $space_md;
+}
+
+.row_space-bottom--md {
+	padding-bottom:$space_md;
+}
+
+// .row_space--XX
+.row_space--xxs{
+  padding-top:$space_xxs;
+  padding-bottom:$space_xxs;
+}
+.row_space--xs {
+	padding-top:$space_xs;
+	padding-bottom:$space_xs;
+	}
+.row_space--sm{
+	padding-top:$space_sm;
+	padding-bottom:$space_sm;
+}
+.row_space--md {
+	padding-top:$space_md;
+	padding-bottom:$space_md;
+}
+
+.row_space--lg {
+	padding-top:$space_lg;
+	padding-bottom:$space_lg;
+}

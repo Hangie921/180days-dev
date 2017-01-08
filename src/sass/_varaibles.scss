@@ -1,0 +1,99 @@
+// === colors ====
+$colors: 
+"pri_gray" #e5e5e5,
+"pri_gray_light" #f9f9f9,
+"pri_dark" #333,
+"pri_green" #7ed321,
+"pri_red" #c92114,
+"base_gray" #757575,
+"base_black" #000,
+"base_white" #fff,
+"btn_blue" #337ab7;
+
+
+$pri_gray:			#e5e5e5;
+$pri_gray_light:	#f9f9f9;
+$pri_dark:			#333;
+$pri_green:			#7ed321;
+$pri_red:			#c92114;
+
+$base_gray:#757575;
+$base_black:#000;
+$base_white:#fff;
+
+$window_colors:
+"1" #e0564c,
+"2" #43c0df,
+"3" #449d44,
+"4" #ffac00,
+"5" #FF69B4,
+"6" #333;
+
+// === font ========
+
+$base_font_family : 			sans-serif !default;
+$base_font_weight:				500; // normal
+$base_font_weight_bold:			600;
+$base_font_size:				16px;
+
+$base_line_height:				22 / 16 !default; // 20/14
+
+$bold_font_family: 				'Avenir';
+
+
+$logo_capital_font:				'HelveticaNeue-Medium';
+$logo_font:						'LucidaGrande-Bold';
+
+$h1_font_size:					30px;
+$h2_font_size:					24px;
+$h3_font_size:					18px;
+
+
+// === mobile font ======
+$mobile_base_font_size:			12px;
+$mobile_h1_font_size:			24px;
+$mobile_h2_font_size:			18px;
+$mobile_h3_font_size:			14px;
+
+
+
+
+
+
+// === spacing ==========
+
+$space_lg:70px;
+$space_md:43px;
+$space_sm:26px;
+$space_xs:15px;
+$space_xxs:7px;
+
+
+$base_padding_vertical:     $space_md;
+$large_padding_vertical:    $space_lg;
+$small_padding_vertical:    $space_sm;
+$xs_padding_vertical:       $space_xs;
+
+$base_border_radius:        7px;
+
+
+//-- Z-index master list ==============================
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex_tooltip:           1070 !default;
+$zindex_popover:           1060 !default;
+$zindex_modal:             1050 !default;
+$zindex_modal-background:  1040 !default;
+$zindex_navbar-fixed:      1030 !default;
+$zindex_navbar:            1000 !default;
+$zindex_dropdown:          1000 !default;
+
+// =================== section border =====================
+$section_border_bottom_color: $pri_dark;
+
+
+

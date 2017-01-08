@@ -1,0 +1,198 @@
+@import '~sass/_breakpoint.scss';
+body{
+	font-family: $base_font_family;
+	color:$pri_dark;
+	font-size: $base_font_size;
+	line-height:$base_line_height;
+	background-color:$base_white;
+	box-sizing:border-box;
+	font-weight: $base_font_weight;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:greyscale;
+  @include breakpoint(xxs) {
+    font-size: $mobile_base_font_size;
+  }
+}
+
+html{
+  -ms-overflow-style: none;
+}
+
+a{
+	text-decoration:none;
+	color:$pri_dark;
+  &:focus{
+    outline:none !important; // to remove outline in FireFox 
+    text-decoration: none;
+  } 
+}
+h1, h2, h3 {
+  text-transform: capitalize;
+}
+h1{
+	font-size: $h1_font_size;
+  margin-bottom:$space_xs;
+  margin-top: $space_xs;
+  @include breakpoint(xxs) {
+    font-size: $mobile_h1_font_size;
+    margin-top: $space_xxs;
+    margin-bottom: $space_xxs;
+  }
+  @include breakpoint(landXS) {
+    margin-top: $space_xxs;
+    margin-bottom: $space_xxs;
+    font-size: $mobile_h1_font_size;
+  }
+}
+h2{
+	font-size: $h2_font_size;
+  margin-bottom:$space_xs;
+  margin-top: $space_xs;
+  @include breakpoint(xxs) {
+    font-size: $mobile_h2_font_size;
+    margin-top: $space_xxs;
+    margin-bottom: $space_xxs;
+  }
+  @include breakpoint(landXS) {
+    margin-top: $space_xxs;
+    margin-bottom: $space_xxs;
+    font-size: $mobile_h2_font_size;
+  }
+}
+h3{
+	font-size: $h3_font_size;
+  margin-bottom:$space_xs;
+  margin-top: $space_xs;
+  @include breakpoint(xxs) {
+    font-size: $mobile_h3_font_size;
+    margin-top: $space_xxs;
+    margin-bottom: $space_xxs;
+  }
+  @include breakpoint(landXS) {
+    margin-top: $space_xxs;
+    margin-bottom: $space_xxs;
+    font-size: $mobile_h3_font_size;
+  }
+}
+p {
+	font-size:$base_font_size;
+	color:$pri_dark;
+	font-weight:500;
+}
+span {
+	font-family: $base_font_family;
+}
+input::-webkit-input-placeholder{
+	color:$pri_dark;
+}
+input::-ms-clear{ // to remove the clear croxx for IE 8+
+  display:none;
+}
+
+input.dashboard_input {
+	background:$base_white;
+}
+
+ul {
+	list-style:none;
+	padding-left:0;
+}
+
+div,section,header,footer{
+	 @include prefix((
+       box-sizing:border-box
+        ),moz webkit ms o);
+}
+
+
+// ================= FONT =======================
+.bolder{
+  font-family: $bold_font_family;
+  font-weight:900;
+}
+
+
+// ============= Hide & Show ==============
+
+.hidden {
+	display:none !important;
+}
+
+
+// ============= header in every page ===========
+.main_title_bar{
+  border-bottom:1px solid $pri_dark;
+  vertical-align:middle;
+  &  h1{
+    text-transform:uppercase;
+  }
+}
+
+
+// ============= sections ================
+ .title_bar{
+ 	margin-top: 0px;
+  padding: 0px $space_xs 5px;
+  text-transform:capitalize;
+  }
+
+
+// use the style under to modify styles without modify the default 
+// style of the external components, use them carefully
+
+// ============= btn colors ================
+.btn-info-bg-color{
+	background-color:#5bc0de !important;
+}
+
+// ============= no select ============
+.no_select{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+}
+
+// ============= border colors =============
+.btn-info-border-color{
+	border-color:#5bc0de !important;
+}
+
+
+
+// ============= image ===================
+.img-height-responsive{
+  max-height:100%;
+  width:auto;
+  display:block;
+}
+
+// ============= warning ==================
+
+// ============= error ====================
+.error{
+  display:inline-block;
+  background-color: $pri_red;
+  color:$base_white;
+  padding:5px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form-control.invalid.modified{
+  border:2px solid #f00 !important;
+}
+// ========== remove ZingChart logo ====
+.zc-license {
+  display: none ;
+}
+
+
+// ================== others ==================
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

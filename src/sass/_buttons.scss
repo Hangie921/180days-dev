@@ -1,0 +1,84 @@
+.btn-square-xs{
+  width:55px;
+  height:55px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+.btn-square-sm{
+  width:80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.fa-edit, .fa-cog{
+  cursor:pointer;
+}
+
+// using it as:
+// span 'name'
+// label.iosCheck
+//    input(type='checkbox')
+//    i
+.iosCheck{
+  height:30px;
+}
+.iosCheck input {
+  display: none;
+}
+.iosCheck i {
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 25px;
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  border-radius: 25px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.iosCheck i:before {
+  display: block;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.iosCheck :checked + i {
+  padding-right: 0;
+  padding-left: 25px;
+  background: #00e970;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 40px #00e079;
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 40px #00e079;
+}
+
+// ======= font awesom checkbox==================
+// use it as
+// .fa_checkbox
+//   input
+//   label
+.fa_checkbox{
+  font-family: FontAwesome;
+  & input{
+    display: none;
+  }
+  & input:checked + label{
+    &:before{
+      /* fa-check-square-o */
+      content: '\f046';
+    }
+  }
+  & label{
+    cursor: pointer;
+    &:before{
+      /* fa-square-o*/
+      content: '\f096'; 
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin-right: 15px;
+    }
+  }
+}

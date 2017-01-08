@@ -1,29 +1,30 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-    <div class="test"></div>
-  </div>
+<template lang="jade">
+  #app
+    app-header
+    router-view
 </template>
 
 <script>
-import Hello from './components/Hello'
-
+import Header from 'src/components/Header'
 export default {
-  name: 'app',
   components: {
-    Hello
+    'appHeader': Header
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import '~sass/_varaibles.scss';
+@import '~sass/_breakpoint.scss';
+@import "./main.scss";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  position: relative;
 }
 </style>
