@@ -219,13 +219,11 @@
           | 008 More Drop Shadow
 
       li
-        a(href="http://codepen.io/Lazyboy/full/ojyvya")
-          | 007 Technical Box
-
+        router-link(to="/technical_box")
+          | 006 Technical Box
       li
-        a(href="http://codepen.io/Lazyboy/full/qOYVgO")
-          | 006 Day Tracker
-
+        router-link(to="/date_tracker")
+          | 005 Day Tracker
       li
         router-link(to="/secret_msg")
           | 004 Secret Message
