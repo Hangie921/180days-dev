@@ -227,8 +227,8 @@
           | 006 Day Tracker
 
       li
-        a(href="http://codepen.io/Lazyboy/full/KdRpwz/")
-          | 005 Secret Message
+        router-link(to="/secret_msg")
+          | 004 Secret Message
 
       li
         router-link(to="/paint_the_wall")
