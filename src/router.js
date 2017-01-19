@@ -6,11 +6,16 @@ import paintTheWall from 'src/pages/003Paint_the_wall'
 import secretMsg from 'src/pages/004Secret_msg'
 import dateTracker from 'src/pages/005Date_tracker'
 import technicalBox from 'src/pages/006Technical_boxes'
+import moreDropShadow from 'src/pages/007More_Drop_Shadow'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/more_drop_shadow',
+      component: moreDropShadow
+    },
     {
       path: '/technical_box',
       component: technicalBox
