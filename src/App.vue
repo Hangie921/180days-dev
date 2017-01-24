@@ -1,6 +1,6 @@
 <template lang="jade">
   #app
-    .loading
+    .loading(v-if="showLoading")
       .loading
         .ani
           span.loadStyle.load1
@@ -12,9 +12,22 @@
 
 <script>
 import Header from 'src/components/Header'
+
 export default {
   components: {
     'appHeader': Header
+  },
+  mounted () {
+    this.$store.commit('hideLoading')
+  },
+  data () {
+    return {
+    }
+  },
+  computed: {
+    showLoading () {
+      return this.$store.state.showLoading
+    }
   }
 }
 </script>

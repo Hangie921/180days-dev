@@ -55,7 +55,7 @@ export default {
     }
   },
   mounted () {
-
+    console.log(this.$store)
   },
   methods: {
     resetWeather () {
@@ -64,7 +64,7 @@ export default {
       this.rain = false
     },
     search () {
-      this.showLoading = true
+      this.$store.commit('showLoading')
       if (this.country) {
         query = url + this.city + ',' + this.country + appid
       } else {
@@ -81,8 +81,6 @@ export default {
 
           this.weather = data.weather[0].main
           this.weather_description = data.weather[0].description
-
-          this.showInfo = true
         }
 
         if (this.weather === 'Clear') {
@@ -95,7 +93,8 @@ export default {
           this.resetWeather()
           this.cloud = true
         }
-        this.showLoading = false
+        this.showInfo = true
+        this.$store.commit('hideLoading')
       }).catch(err => {
         console.log(err)
         this.showLoading = false
