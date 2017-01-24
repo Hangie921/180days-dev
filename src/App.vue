@@ -1,5 +1,11 @@
 <template lang="jade">
   #app
+    .loading
+      .loading
+        .ani
+          span.loadStyle.load1
+          span
+          | Loading
     app-header
     router-view
 </template>

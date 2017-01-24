@@ -13,6 +13,9 @@
     hr
     .list.col-md-12
       ul
+        li 
+          router-link(to="/show_the_weather")
+            | 087 Show the Weather
         li
           a(href="http://codepen.io/Lazyboy/full/RRbQpr")
             | 079 Triangle Animation
