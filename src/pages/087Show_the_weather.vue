@@ -70,7 +70,7 @@ export default {
       } else {
         query = url + this.city + appid
       }
-      this.$http.get(query).then(({data}) => {
+      this.$http.jsonp(query).then(({data}) => {
         console.log(data)
         if (data.cod === 200) {
           this.humidity = data.main.humidity
