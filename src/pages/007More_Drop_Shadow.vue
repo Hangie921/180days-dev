@@ -16,7 +16,6 @@ export default {
     }
   },
   mounted () {
-
   },
   methods: {
     addShadow () {
@@ -55,7 +54,7 @@ export default {
 }
 .text{
   margin-top: -300px;
-  margin-left: -600px;
+  margin-left: -300px;
   font-family:'tahoma';
   font-size:30px;
 }
