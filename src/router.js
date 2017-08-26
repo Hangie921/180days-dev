@@ -10,11 +10,16 @@ import moreDropShadow from 'src/pages/007More_Drop_Shadow'
 import bouncTheBall from 'src/pages/008Bounce_the_ball'
 import showTheWeather from 'src/pages/087Show_the_weather'
 import colorClock from 'src/pages/011Color_clock'
+import diceRoll from 'src/pages/012Dice_roll'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/dice_roll',
+      component: diceRoll
+    },
     {
       path: '/color_clock',
       component: colorClock

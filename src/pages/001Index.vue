@@ -209,6 +209,9 @@
           a(href="http://codepen.io/Lazyboy/full/avjgEj")
             | 012 Dice Roll
         li
+          router-link(to="/dice_roll")
+            | 012 Dice Roll
+        li
           router-link(to="/color_clock")
             | 011 Color Clock
         li
