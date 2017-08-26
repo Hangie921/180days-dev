@@ -9,11 +9,16 @@ import technicalBox from 'src/pages/006Technical_boxes'
 import moreDropShadow from 'src/pages/007More_Drop_Shadow'
 import bouncTheBall from 'src/pages/008Bounce_the_ball'
 import showTheWeather from 'src/pages/087Show_the_weather'
+import colorClock from 'src/pages/011Color_clock'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/color_clock',
+      component: colorClock
+    },
     {
       path: '/bounce_the_ball',
       component: bouncTheBall

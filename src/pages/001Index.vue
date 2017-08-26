@@ -202,7 +202,6 @@
         li
           a(href="http://codepen.io/Lazyboy/full/wKEbXR")
             | 015 Dropping boxes
-
         li
           a(href="http://codepen.io/Lazyboy/full/NGLjpe")
             | 013 Rock Paper Scissors
@@ -210,14 +209,11 @@
           a(href="http://codepen.io/Lazyboy/full/avjgEj")
             | 012 Dice Roll
         li
-          a(href="http://codepen.io/Lazyboy/full/zvLdvX")
+          router-link(to="/color_clock")
             | 011 Color Clock
         li
           a(href="http://codepen.io/Lazyboy/full/MaByYY")
             | 010 Kumamon Jigger
-        li
-          a(href="http://codepen.io/Lazyboy/full/JYZBwg")
-            | 008 Bouncing Ball
         li
           router-link(to="/bounce_the_ball")
             | 008 Bouncing Ball
