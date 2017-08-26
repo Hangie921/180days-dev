@@ -217,8 +217,10 @@
             | 010 Kumamon Jigger
         li
           a(href="http://codepen.io/Lazyboy/full/JYZBwg")
-            | 009 Bouncing Ball
-        
+            | 008 Bouncing Ball
+        li
+          router-link(to="/bounce_the_ball")
+            | 008 Bouncing Ball
         li 
           router-link(to="/more_drop_shadow")
             | 007 More Drop Shadow

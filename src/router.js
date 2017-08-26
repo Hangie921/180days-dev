@@ -7,12 +7,17 @@ import secretMsg from 'src/pages/004Secret_msg'
 import dateTracker from 'src/pages/005Date_tracker'
 import technicalBox from 'src/pages/006Technical_boxes'
 import moreDropShadow from 'src/pages/007More_Drop_Shadow'
+import bouncTheBall from 'src/pages/008Bounce_the_ball'
 import showTheWeather from 'src/pages/087Show_the_weather'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/bounce_the_ball',
+      component: bouncTheBall
+    },
     {
       path: '/show_the_weather',
       component: showTheWeather
