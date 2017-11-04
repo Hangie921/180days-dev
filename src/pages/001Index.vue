@@ -196,9 +196,9 @@
         li
           a(href="http://codepen.io/Lazyboy/full/GpYqLK")
             | 016 Caterpillar
-        //- li
-        //-   router-link(to="/caterpillar")
-        //-     | 016 Caterpillar
+        li
+          router-link(to="/caterpillar")
+            | 016 Caterpillar
         li
           router-link(to="/click_box")
             | 015 Dropping boxes

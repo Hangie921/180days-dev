@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import $ from 'jquery'
+// import $ from 'jquery'
 export default {
   data () {
     return {
@@ -31,6 +31,7 @@ export default {
     let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                               window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
     window.requestAnimationFrame = requestAnimationFrame
+    this.requestAnimationFrame(this.step)
   },
   methods: {
     onMousemove (e) {
@@ -47,18 +48,29 @@ export default {
       return window.requestAnimationFrame(step)
     },
     step (timestamp) {
+      let regex = /translateX\((\d*)px\)\stranslateY\((\d*)px\)/
       if (this.start === null) this.start = timestamp
       this.progress = timestamp - this.start
-      this.cx += (this.x - this.cx) < 0 ? -1 : 1
-      this.cy += (this.y - this.cy) < 0 ? -1 : 1
+      console.log('progress', this.progress)
+
       for (let i = 1; i < 11; i++) {
-        $('#c' + i).css({
-          transform: 'translateX(' + this.cx + 'px) translateY(' + this.cy + 'px)'
-        })
+        let e = document.getElementById('c' + i)
+
+        if (regex.exec(e.style.transform)) {
+          this.cx = parseInt(regex.exec(e.style.transform)[1])
+          this.cy = parseInt(regex.exec(e.style.transform)[2])
+        }
+
+        this.cx += (this.x - this.cx) < 0 ? Math.min(100, (this.x - this.cy) / -10) : Math.min(100, (this.x - this.cy) / 10)
+        this.cy += (this.y - this.cy) < 0 ? Math.min(100, (this.x - this.cy) / -10) : Math.min(100, (this.x - this.cy) / 10)
+        e.style.transform = 'translateX(' + this.cx + 'px) translateY(' + this.cy + 'px)'
       }
-      if (Math.abs(this.cx - this.x) >= 0 || Math.abs(this.cy - this.y) >= 0) {
+      if (this.progress < 2000) {
         this.requestAnimationFrame(this.step)
       }
+      // if (Math.abs(this.x - this.cx) >= 0 || Math.abs(this.y - this.cy) >= 0) {
+      //   this.requestAnimationFrame(this.step)
+      // }
     }
   },
   computed: {
@@ -92,7 +104,7 @@ export default {
   height: 100px;
   background-color: #FF9940;
   z-index: 2;
-  transition: all 7.3s;
+  transition: all 10.3s;
 }
 
 #c2 {
@@ -100,7 +112,7 @@ export default {
   height: 90px;
   background-color: #FFE699;
   z-index: 2;
-  transition: all 4.3s;
+  transition: all 9.3s;
 }
 
 #c3 {
@@ -108,7 +120,7 @@ export default {
   height: 80px;
   background-color: #3D993D;
   z-index: 2;
-  transition: all 5.8s;
+  transition: all 8.5s;
 }
 
 #c4 {
@@ -116,7 +128,7 @@ export default {
   height: 70px;
   background-color: #B3FFF2;
   z-index: 2;
-  transition: all 2.3s;
+  transition: all 7.3s;
 }
 
 #c5 {
@@ -124,7 +136,7 @@ export default {
   height: 60px;
   background-color: #9999FF;
   z-index: 2;
-  transition: all 10.3s;
+  transition: all 6.4s;
 }
 
 #c6 {
@@ -148,6 +160,7 @@ export default {
   height: 30px;
   background-color: #FFA600;
   z-index: 2;
+  transition: all 3.0s;
 }
 
 #c9 {
@@ -155,6 +168,7 @@ export default {
   height: 20px;
   background-color: #FF3366;
   z-index: 2;
+  transition: all 2.5s;
 }
 
 #c10 {
@@ -162,5 +176,6 @@ export default {
   height: 0px;
   background-color: #5E8529;
   z-index: 2;
+  transition: all 1.6s;
 }
 </style>
