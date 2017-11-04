@@ -11,11 +11,21 @@ import bouncTheBall from 'src/pages/008Bounce_the_ball'
 import showTheWeather from 'src/pages/087Show_the_weather'
 import colorClock from 'src/pages/011Color_clock'
 import diceRoll from 'src/pages/012Dice_roll'
+import clickBox from 'src/pages/015Click_box'
+import caterpillar from 'src/pages/016Caterpillar'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/caterpillar',
+      component: caterpillar
+    },
+    {
+      path: '/click_box',
+      component: clickBox
+    },
     {
       path: '/dice_roll',
       component: diceRoll

@@ -13,9 +13,6 @@
     hr
     .list.col-md-12
       ul
-        li 
-          router-link(to="/show_the_weather")
-            | 087 Show the Weather
         li
           a(href="http://codepen.io/Lazyboy/full/RRbQpr")
             | 079 Triangle Animation
@@ -199,15 +196,15 @@
         li
           a(href="http://codepen.io/Lazyboy/full/GpYqLK")
             | 016 Caterpillar
+        //- li
+        //-   router-link(to="/caterpillar")
+        //-     | 016 Caterpillar
         li
-          a(href="http://codepen.io/Lazyboy/full/wKEbXR")
+          router-link(to="/click_box")
             | 015 Dropping boxes
         li
           a(href="http://codepen.io/Lazyboy/full/NGLjpe")
             | 013 Rock Paper Scissors
-        li
-          a(href="http://codepen.io/Lazyboy/full/avjgEj")
-            | 012 Dice Roll
         li
           router-link(to="/dice_roll")
             | 012 Dice Roll
